@@ -1,9 +1,3 @@
-## Final Project Overview
-
-This document provides an overview of the group members, tools, and data documentation for the Final Project
-
-----------------
-
 ## Team Members
 
 Jawaid Hakim
