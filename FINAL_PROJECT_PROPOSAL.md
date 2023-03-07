@@ -18,14 +18,14 @@ patterns, using methods like tokenization, stemming, and lemmatization, which ex
 It aims to teach computers what a body of text or spoken speech means. NLU leverages AI algorithms to recognize attributes of language such as sentiment, semantics, context, and intent. It enables computers to understand the subtleties and variations of language.
 
 **NLG** (Natural Language Generation) is also a subset of NLP and is concerned with enabling machines to not just process and understand text but to generate text. While NLU focuses on computer reading comprehension, NLG enables computers to write. NLG is the process of producing a human language 
-text response based on some data input (prompt).
+text response based on some data input (prompt).[[1]](#1)
 
 ## Project Goal
 
 Recent advancements in NLP, most notable the NLG capabilities of Large Language Models (LLM) like ChatGPT, have taken the public imagination by storm. In this project we will explore the following:
 
 - **NLP**: create a classifier to classify product reviews as either original (presumably human created and authentic) or fake (computer generated fake reviews)
-  - Use [Fastai](https://docs.fast.ai) to build the classifier. This will be accomplished by taking a pretrained language model and fine-tuning it to classify reviews.  What we call a language model is a model that has been trained to guess what the next word in a text is (having read the ones before). This kind of task is called self-supervised learning: we do not need to give labels to our model, just feed it lots and lots of texts. It has a process to automatically get labels from the data, and this task isn't trivial: to properly guess the next word in a sentence, the model will have to develop an understanding of the English (or other) language.
+  - Use [Fastai](https://docs.fast.ai) to build the classifier. This will be accomplished by taking a pretrained language model and fine-tuning it to classify reviews.  What we call a language model is a model that has been trained to guess what the next word in a text is (having read the ones before). This kind of task is called self-supervised learning: we do not need to give labels to our model, just feed it lots and lots of texts. It has a process to automatically get labels from the data, and this task isn't trivial: to properly guess the next word in a sentence, the model will have to develop an understanding of the English (or other) language.[[2]](#2)
 - **NLU**: the English learned by the pretrained language model (Wikipedia) is slightly different from the English used for product reviews, so instead of jumping directly to the classifier, we will fine-tune our pretrained language model to the product corpus and then use that as the base for our classifier. This should (hopefully) result in better performance.
 - **NLG**: finally, having created a language model that has been fine-tuned for product reviews, we will use it to auto-generate fake reviews. This will be done by gicing the model a starting text (prompt) and then having the model generate rest of the text (up to a maximum number of words).
 
@@ -38,3 +38,10 @@ The generated [fake reviews dataset](https://osf.io/3vds7), containing 20k fake 
 - [Google Collab](https://colab.research.google.com)
 - [Jupyter Notebook](https://jupyter.org/)
 - [Fastai](https://docs.fast.ai)
+
+## References
+<a id="1">[1]</a>
+https://www.ibm.com/topics/natural-language-processing
+
+<a id="2">[2]</a>
+https://fastai.github.io/fastbook2e/book10.html
