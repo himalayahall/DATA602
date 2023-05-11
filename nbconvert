@@ -1,0 +1,1 @@
+jupyter nbconvert 'Project.ipynb' --to slides --post serve
